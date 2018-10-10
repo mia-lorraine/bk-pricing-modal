@@ -8,9 +8,7 @@ product, warranty, material, priority, serial, acconfig, minqty,
 initqty, artcqty, arrivedate, notes;
 
 class App extends Component {
-// let model, vendor, description, origin, cost, listprice, price,
-// product, warranty, material, priority, serial, acconfig, minqty,
-// initqty, artcqty, notes;
+
 submit(e) {
   e.preventDefault();
 
@@ -313,7 +311,11 @@ submit(e) {
                 </FormGroup>
               </Col>
     </Row>
-    <Button type = "submit"> Submit </Button>
+    <FormGroup>
+      <Button type="submit" bsStyle="primary">
+                  Submit
+                    </Button>
+      </FormGroup>
     </Form>
     </Grid>
     );
