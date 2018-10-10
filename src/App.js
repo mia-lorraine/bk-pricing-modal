@@ -14,14 +14,12 @@ constructor(){
     pricingList: []
   }
 
-  this.submit() = this.submit.bind(this);
 }
 
-submit(e) {
-  e.preventDefault();
+handleClick() {
 
   axios
-  .post('http://localhost:3001/pricing', {
+  .post('http://localhost:3001/pricingList', {
     model: model.value,
     vendor: vendor.value,
     description: description.value,
@@ -45,6 +43,7 @@ submit(e) {
     console.log(response);
     console.log(response.data);
   });
+
   model.value = vendor.value = description.value = origin.value = cost.value = listprice.value =
   product.value = warranty.value = material.value = priority.value = serial.value = acconfig.value =
   minqty.value = initqty.value = arrivedate.value = artcqty.value = notes.value = "";
@@ -320,7 +319,7 @@ submit(e) {
               </Col>
     </Row>
     <FormGroup>
-      <Button type="submit" onClick = (e) => {this.submit()}>
+      <Button onClick = {this.handleClick()}>
                   Submit
                     </Button>
       </FormGroup>
