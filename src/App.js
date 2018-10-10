@@ -8,6 +8,14 @@ product, warranty, material, priority, serial, acconfig, minqty,
 initqty, artcqty, arrivedate, notes;
 
 class App extends Component {
+constructor(){
+  super();
+  this.state = {
+    pricingList: []
+  }
+
+  this.submit() = this.submit.bind(this);
+}
 
 submit(e) {
   e.preventDefault();
@@ -312,7 +320,7 @@ submit(e) {
               </Col>
     </Row>
     <FormGroup>
-      <Button type="submit" bsStyle="primary">
+      <Button type="submit" onClick = (e) => {this.submit()}>
                   Submit
                     </Button>
       </FormGroup>
